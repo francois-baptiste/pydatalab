@@ -45,14 +45,14 @@ _ABS_DATASET_NAME_PATTERN = r'^([a-z\d\-_\.:]+)\:(\w+)$'
 # Relative name pattern: <dataset>
 _REL_DATASET_NAME_PATTERN = r'^(\w+)$'
 
-# Absolute project-qualified name pattern: <project>:<dataset>.<table>
-_ABS_TABLE_NAME_PATTERN = r'^([a-z\d\-_\.:]+)\:(\w+)\.(\w+)(@[\d\-]+)?$'
+# Absolute project-qualified name pattern: <project>.<dataset>.<table>
+_ABS_TABLE_NAME_PATTERN = r'^([a-z\d\-_\.:]+)\:(\w+)\.([a-zA-Z0-9_\$]+)(@[\d\-]+)?$'
 
 # Relative name pattern: <dataset>.<table>
-_REL_TABLE_NAME_PATTERN = r'^(\w+)\.(\w+)(@[\d\-]+)?$'
+_REL_TABLE_NAME_PATTERN = r'^(\w+)\.([a-zA-Z0-9_\$]+)(@[\d\-]+)?$'
 
 # Table-only name pattern: <table>. Includes an optional decorator.
-_TABLE_NAME_PATTERN = r'^(\w+)(@[\d\-]+)$'
+_TABLE_NAME_PATTERN = r'^([a-zA-Z0-9_\$]+)(@[\d\-]+)$'
 
 
 def parse_dataset_name(name, project_id=None):
